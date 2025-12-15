@@ -1,0 +1,44 @@
+.FilterSection {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* ✅ PUSHES TO LEFT */
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding-top:20px;
+}
+.Filter {
+  
+  display: flex;
+  /* align-items: center; */
+  gap: 14px;
+}
+
+/* Each label + select as one unit */
+.Filter label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Compact dropdown */
+.Filter select {
+  height: 26px;
+  padding: 0 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #c7d2fe;
+  background: white;
+  cursor: pointer;
+  line-height: 26px;
+  margin-top:14px;
+}
+
+/* Focus effect */
+.Filter select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25);
+}
