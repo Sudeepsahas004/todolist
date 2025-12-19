@@ -3,7 +3,7 @@ import styles from "./TodoFilters.module.css";
 import { COMPLETED_FILTERS, PRIORITY_FILTERS } from "../../constants/filters";
 import { PRIORITIES } from "../../constants/priorities";
 
-const TodoFilter = ({todos, onFilters }) => {
+const TodoFilter = ({ onFilters }) => {
   const [completed, setCompleted] = useState("all");
   const [priority, setPriority] = useState("all");
 
@@ -19,7 +19,7 @@ const TodoFilter = ({todos, onFilters }) => {
 
     
     <section className={styles.FilterSection}>
-      {todos.length>0 && (<div className={styles.Filter}>
+      <div className={styles.Filter}>
         {/* Completed Filter */}
         <label htmlFor="completed">Completed</label>
         <select
@@ -47,7 +47,7 @@ const TodoFilter = ({todos, onFilters }) => {
             </option>
           ))}
         </select>
-      </div>)}
+      </div>
       {/* <h3>Filters</h3> */}
       
     </section>

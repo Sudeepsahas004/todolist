@@ -42,6 +42,11 @@
 }
 
 
+.violetBtn:hover{
+   background-color: #696aafff;
+   
+}
+
 .submit:hover {
   background-color: #3f44dbff;
 }
@@ -86,4 +91,5 @@
   font-size:14px;
   
 }
+
 }

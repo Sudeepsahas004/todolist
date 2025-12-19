@@ -72,7 +72,7 @@ function App() {
      
       
       <TodoForm showAllFields={showAllFields} setShowAllFields={setShowAllFields} onCreate={handleCreate} />
-      <TodoFilter  todos={todos.filter(todo => filterTodos(todo))} onFilters={setFilters} />
+      <TodoFilter   onFilters={setFilters} />
       <Todolist
         todos={todos.filter(todo => filterTodos(todo))}
         onUpdate={handleUpdate}

@@ -7,7 +7,7 @@ import TodoFormFields from "../TodoFormFields/TodoFormFields";
 
 const TodolistItem = ({ todo, onUpdate, onDelete }) => {
   const [isEditing, setIsEditing] = useState(false);
-  const { register, handleSubmit,formState:{errors} } = useForm({defaultValues:todo});
+  const { register, handleSubmit,formState:{errors},watch} = useForm({defaultValues:todo});
 
   // const handleEdit = (data) => {
   //   const form = event.target;
@@ -81,7 +81,7 @@ const TodolistItem = ({ todo, onUpdate, onDelete }) => {
       onReset={() => setIsEditing(false)}
       onSubmit={handleSubmit(handleEdit)}
     >
-      <TodoFormFields todo={todo} register={register} errors={errors}/>
+      <TodoFormFields todo={todo} register={register} errors={errors} watch={watch}/>
       <div>
         <input type="submit" value="💾" />
         <input type="reset" value="🔃" />
